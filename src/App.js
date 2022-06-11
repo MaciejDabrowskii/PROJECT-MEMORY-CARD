@@ -1,9 +1,6 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable array-callback-return */
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable max-len */
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
@@ -15,6 +12,7 @@ function App()
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [currentLevel, setCurrentLevel] = useState(1);
+  const [currentScore, setCurrentScore] = useState(0);
   const [level, setLevel] = useState({
     1: 4,
     2: 6,
@@ -92,9 +90,10 @@ function App()
 
   const [cardsArray, setCardsArray] = useState([...cards].slice(0, level[currentLevel]));
 
-  const incrementScore = (e) =>
+  const incrementScore = () =>
   {
     setScore(score + 1);
+    setCurrentScore(currentScore + 1);
   };
 
   const updateBestScore = () =>
@@ -110,47 +109,50 @@ function App()
     setCardsArray([...cards].slice(0, level[currentLevel]));
   };
 
-  const restetGame = () =>
-  {
-    setScore(0);
-    setCurrentLevel(1);
-    setCardsArray([...cards].slice(0, level[currentLevel]));
-    cardsArray.map((card) =>
-    {
-      setCardsArray([...cardsArray], card.clicked = false);
-    });
-  };
-
   const shuffleCards = () =>
   {
     setCardsArray(
-      cardsArray
+      [...cardsArray]
         .map((value) => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value),
     );
   };
 
+  const resetGame = () =>
+  {
+    setScore(0);
+    setCurrentScore(0);
+    setCurrentLevel(1);
+    setCardsArray(cardsArray.map((card) => ({ ...card, clicked: false })));
+    setCardsArray([...cards].slice(0, level[currentLevel]));
+  };
+
   const markClick = (e) =>
   {
-    cardsArray.map((card, index) =>
+    if (e.target.dataset.clicked !== "true")
     {
-      if (card.id === e.target.dataset.key)
-      {
-        setCardsArray([...cardsArray], [...cardsArray][index].clicked = true);
-      }
-    });
-    shuffleCards();
-
-    e.target.dataset.clicked !== "true"
-      ? incrementScore()
-      : restetGame();
-    console.log(level[currentLevel]);
+      incrementScore();
+      setCardsArray(
+        cardsArray.map((card, index) =>
+        {
+          if (card.id === e.target.dataset.key)
+          {
+            return {
+              ...card,
+              clicked: true,
+            };
+          }
+          return card;
+        }),
+      );
+    }
+    else resetGame();
   };
 
   const updateLevel = () =>
   {
-    if (score === cardsArray.length) setCurrentLevel(currentLevel + 1);
+    if (currentScore === cardsArray.length) setCurrentLevel(currentLevel + 1);
   };
 
   useEffect(() =>
@@ -161,11 +163,16 @@ function App()
 
   useEffect(() =>
   {
+    updateLevel();
+    shuffleCards();
+  }, [currentScore]);
+
+  useEffect(() =>
+  {
     updateCardsArray();
-    cardsArray.map((card) =>
-    {
-      setCardsArray([...cardsArray], card.clicked = false);
-    });
+    setCurrentScore(0);
+    setCardsArray(cardsArray.map((card) => ({ ...card, clicked: false })));
+    setCardsArray([...cards].slice(0, level[currentLevel]));
   }, [currentLevel]);
 
   return (
