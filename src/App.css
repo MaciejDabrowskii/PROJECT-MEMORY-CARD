@@ -1,0 +1,6 @@
+.card-title, .card-img {
+    pointer-events: none
+}
+[data-clicked="false"]{
+    background-color: red;
+}
