@@ -17,7 +17,7 @@ function CardsComponent(props)
              className="card"
              key={card.id}
              data-key={card.id}
-             onClick={props.markClick}
+             onClick={props.onClick}
              data-clicked={card.clicked}
            >
              <p

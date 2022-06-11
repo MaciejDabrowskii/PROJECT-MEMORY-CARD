@@ -128,7 +128,7 @@ function App()
     setCardsArray([...cards].slice(0, level[currentLevel]));
   };
 
-  const markClick = (e) =>
+  const onClick = (e) =>
   {
     if (e.target.dataset.clicked !== "true")
     {
@@ -178,7 +178,7 @@ function App()
   return (
     <div className="App">
       <Scoreboard score={score} bestScore={bestScore} level={currentLevel} />
-      <CardsComponent cards={cardsArray} markClick={markClick} />
+      <CardsComponent cards={cardsArray} onClick={onClick} />
     </div>
   );
 }
