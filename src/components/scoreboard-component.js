@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
-import uniqid from "uniqid";
+import React from "react";
 
-function Scoreboard(props)
+function ScoreboardComponent(props)
 {
   return (
     <div
@@ -34,4 +33,4 @@ function Scoreboard(props)
     </div>
   );
 }
-export default Scoreboard;
+export default ScoreboardComponent;

@@ -3,9 +3,12 @@
 /* eslint-disable max-len */
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import uniqid from "uniqid";
-import Scoreboard from "./components/scoreboard";
-import CardsComponent from "./components/cards";
+import ScoreboardComponent from "./components/scoreboard-component";
+import CardsComponent from "./components/cards-component";
+import FooterComponent from "./components/footer-component";
+import HeaderComponent from "./components/header-component";
+import Cards from "./components/cards";
+import GameOverModalComponent from "./components/gameover-modal-component";
 
 function App()
 {
@@ -13,6 +16,7 @@ function App()
   const [bestScore, setBestScore] = useState(0);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [currentScore, setCurrentScore] = useState(0);
+  const [displayModal, setDisplayModal] = useState(false);
   const [level, setLevel] = useState({
     1: 4,
     2: 6,
@@ -23,70 +27,7 @@ function App()
     7: 16,
   });
 
-  const [cards, setCards] = useState(
-    [
-      {
-        name: "Ala",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Ola",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Kasia",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Monika",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Karol",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Dawid",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Wojtek",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Basia",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Zyta",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-      {
-        name: "Maciek",
-        imgUrl: "",
-        clicked: false,
-        id: uniqid(),
-      },
-    ],
-  );
+  const cards = Cards();
 
   const [cardsArray, setCardsArray] = useState([...cards].slice(0, level[currentLevel]));
 
@@ -128,6 +69,17 @@ function App()
     setCardsArray([...cards].slice(0, level[currentLevel]));
   };
 
+  const gameOver = () =>
+  {
+    setDisplayModal(true);
+  };
+
+  const restartGame = () =>
+  {
+    resetGame();
+    setDisplayModal(false);
+  };
+
   const onClick = (e) =>
   {
     if (e.target.dataset.clicked !== "true")
@@ -147,7 +99,7 @@ function App()
         }),
       );
     }
-    else resetGame();
+    if (e.target.dataset.clicked === "true" || currentScore === 70) gameOver();
   };
 
   const updateLevel = () =>
@@ -177,8 +129,22 @@ function App()
 
   return (
     <div className="App">
-      <Scoreboard score={score} bestScore={bestScore} level={currentLevel} />
+      {displayModal
+      && (
+      <GameOverModalComponent
+        score={currentScore}
+        restartGame={restartGame}
+        closeModal={setDisplayModal}
+      />
+      )}
+      <HeaderComponent />
+      <ScoreboardComponent
+        score={score}
+        bestScore={bestScore}
+        level={currentLevel}
+      />
       <CardsComponent cards={cardsArray} onClick={onClick} />
+      <FooterComponent />
     </div>
   );
 }
