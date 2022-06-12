@@ -19,9 +19,14 @@ function ScoreboardComponent(props)
       <div
         className="scoreboard-bestScore"
       >
-        Best Score:
-        {" "}
-        {props.bestScore}
+        <p>Best Score:</p>
+        <p
+          className="scoreboard-bestScore-value"
+        >
+          {props.bestScore}
+
+        </p>
+
       </div>
       <div
         className="scoreboard-level"

@@ -10,13 +10,24 @@
     --main-red: rgb(255, 0, 0);
     --main-yellow: rgb(255, 222, 0);
     --main-green: rgb(16, 185, 129);
+    --main-pink: rgb(250, 208, 213);
+    --background-blue: rgb(158, 222, 249)
+}
+#root{
+    
 }
 
 body{
-display: block;
-margin: 0;
-padding: 0;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-pink);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.App{
+    display:flex; 
+    flex-direction:column; 
+    height:100vh;
 }
 
 .header {
@@ -24,41 +35,75 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     letter-spacing: .5rem;
     text-align: center;
     padding: 2rem 0 2rem 0;
-    font-size: 2rem
+    font-size: 2rem;
+    background-color: var(--main-blue);
+    color: var(--main-yellow);
+    /* margin-bottom: 2rem; */
 }
 .scoreboard-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--main-yellow);
+    color: var(--main-blue);
+    padding: 1rem;
     gap: 1rem;
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 2rem;
 }
 .scoreboard-bestScore {
-    padding: 0 .5rem 0 .5rem;
-    border-left: .2rem solid var(--main-red);
-    border-right: .2rem solid var(--main-red);
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem 0 1rem;
+    border-left: .4rem solid var(--main-green);
+    border-right: .4rem solid var(--main-green);
+}
+.scoreboard-bestScore-value{
+    color: var(--main-red);
 }
 
 .cards-container{
     display: flex;
-
+    gap: .3rem;
+    align-items: center;
+    justify-content: center;
 }
 .card{
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     width: 25rem;
     height: 28rem;
+    border: .5rem solid var(--main-blue);
+    border-radius: 2rem;
+    background-color: var(--background-blue);
     font-size: 1rem;
     font-size: 2rem;
     font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .card-img{
+    padding: 1rem;
     width: 100%;
     height: auto;
+
+}
+.card img {
+    transition: transform .2s ease;
+}
+.card:hover img{
+    transform: scale(1.1);
 }
 
+.card-title{
+    padding: .3rem;
+    background-color: var(--main-yellow);
+    color: var(--main-blue);
+}
 
 .card-title, .card-img {
     pointer-events: none
@@ -73,12 +118,16 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .modal-container{
     background-color: rgb(255, 255, 255);
     width: 35rem;
     height: 20rem;
+    border: .6rem solid var(--main-blue);
+    background-color: var(--background-blue);
     border-radius: 2rem;
+    color: var(--main-blue);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -91,6 +140,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     top: 1rem;
     position: absolute;
     border: none;
+    color: var(--main-blue);
     background-color: inherit;
     font-size: 1.5rem;
     cursor: pointer;
@@ -101,4 +151,45 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .modal-title {
     font-size: 3rem;
     font-weight: bolder;
+    align-self: center;
+    text-align: center;
+    width: 70%;
+    border-bottom: .3rem solid var(--main-red);
+}
+.modal-body{
+    font-size: 1.5rem;
+}
+.modal-restartGame-btn{
+    padding: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: .2rem solid var(--main-red);
+    border-radius: 1rem;
+    color: var(--main-blue);
+    background-color: inherit;
+    cursor: pointer;
+}
+.modal-restartGame-btn:hover{
+    background-color: var(--main-yellow);
+    /* color: white; */
+}
+.footer-container{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom:  1rem;
+    background-color: var(--main-blue);
+    padding: .5rem;
+}
+.git-icon{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+.git-icon:hover {
+    transform: rotate(360deg) scale(1.2);
+    color: var(--main-yellow);
 }

@@ -134,7 +134,7 @@ function App()
       <GameOverModalComponent
         score={currentScore}
         restartGame={restartGame}
-        closeModal={setDisplayModal}
+        closeModal={restartGame}
       />
       )}
       <HeaderComponent />
