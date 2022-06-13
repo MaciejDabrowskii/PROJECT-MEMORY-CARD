@@ -8,7 +8,7 @@
     Memory Card Game
   </h1>
 
-  <img alt="App preview" src="">
+  <img alt="App preview" src="https://raw.githubusercontent.com/MaciejDabrowskii/PROJECT-MEMORY-CARD/main/src/assets/preview/preview.jpg">
 
 🔗 <b>[Live preview](https://maciejdabrowskii.github.io/PROJECT-MEMORY-CARD/)</b>
 
