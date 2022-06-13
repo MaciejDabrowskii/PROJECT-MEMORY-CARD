@@ -1,21 +1,21 @@
 import uniqid from "uniqid";
 
-import charmander from "../assets/charmander.png";
-import bulbasaur from "../assets/bulbasaur.png";
-import squirtle from "../assets/squirtle.png";
-import pikachu from "../assets/pikachu.png";
-import articuno from "../assets/articuno.png";
-import geodude from "../assets/geodude.png";
-import koffing from "../assets/koffing.png";
-import magnemite from "../assets/magnemite.png";
-import mewtwo from "../assets/mewtwo.png";
-import moltres from "../assets/moltres.png";
-import omanyte from "../assets/omanyte.png";
-import porygon from "../assets/porygon.png";
-import psyduck from "../assets/psyduck.png";
-import staryu from "../assets/staryu.png";
-import weepinbell from "../assets/weepinbell.png";
-import zapdos from "../assets/zapdos.png";
+import charmander from "../assets/app-imgs/charmander.png";
+import bulbasaur from "../assets/app-imgs/bulbasaur.png";
+import squirtle from "../assets/app-imgs/squirtle.png";
+import pikachu from "../assets/app-imgs/pikachu.png";
+import articuno from "../assets/app-imgs/articuno.png";
+import geodude from "../assets/app-imgs/geodude.png";
+import koffing from "../assets/app-imgs/koffing.png";
+import magnemite from "../assets/app-imgs/magnemite.png";
+import mewtwo from "../assets/app-imgs/mewtwo.png";
+import moltres from "../assets/app-imgs/moltres.png";
+import omanyte from "../assets/app-imgs/omanyte.png";
+import porygon from "../assets/app-imgs/porygon.png";
+import psyduck from "../assets/app-imgs/psyduck.png";
+import staryu from "../assets/app-imgs/staryu.png";
+import weepinbell from "../assets/app-imgs/weepinbell.png";
+import zapdos from "../assets/app-imgs/zapdos.png";
 
 function Cards()
 {

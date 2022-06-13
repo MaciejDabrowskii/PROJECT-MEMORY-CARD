@@ -1,4 +1,8 @@
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@font-face {
+    font-family: "PokemonSolid";
+    src: local("PokemonSolid"),
+     url("./assets/fonts/Pokemon Solid.ttf") format("truetype");
+    }
 
 * {
     margin: 0;
@@ -29,7 +33,7 @@ body{
 }
 
 .header {
-    font-family: 'Pokemon Solid', sans-serif;
+    font-family: 'PokemonSolid', sans-serif;
     letter-spacing: .5rem;
     text-align: center;
     padding: 2rem 0 2rem 0;
@@ -127,6 +131,7 @@ body{
     background-color: var(--background-blue);
     border-radius: 2rem;
     color: var(--main-blue);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: relative;
     display: flex;
     flex-direction: column;

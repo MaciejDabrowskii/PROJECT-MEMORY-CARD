@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable max-len */
 import "./App.css";
+import "./assets/fonts/Pokemon Solid.ttf";
 import React, { useState, useEffect } from "react";
 import ScoreboardComponent from "./components/scoreboard-component";
 import CardsComponent from "./components/cards-component";
