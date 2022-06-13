@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PROJECT-MEMORY-CARD/static/css/main.d8709705.css",
-    "main.js": "/PROJECT-MEMORY-CARD/static/js/main.812c836b.js",
+    "main.css": "/PROJECT-MEMORY-CARD/static/css/main.7f79ccd8.css",
+    "main.js": "/PROJECT-MEMORY-CARD/static/js/main.b7760829.js",
     "static/media/bulbasaur.png": "/PROJECT-MEMORY-CARD/static/media/bulbasaur.961a737abc93a29558b0.png",
     "static/media/omanyte.png": "/PROJECT-MEMORY-CARD/static/media/omanyte.7a081c60b4eb8d1f2761.png",
     "static/media/articuno.png": "/PROJECT-MEMORY-CARD/static/media/articuno.297a4df9128748b5c0f0.png",
@@ -18,12 +18,13 @@
     "static/media/magnemite.png": "/PROJECT-MEMORY-CARD/static/media/magnemite.2d0e214c6543d1482a12.png",
     "static/media/moltres.png": "/PROJECT-MEMORY-CARD/static/media/moltres.5efe99b7631ec8f48f57.png",
     "static/media/geodude.png": "/PROJECT-MEMORY-CARD/static/media/geodude.374f30131a78b3d6399d.png",
+    "static/media/Pokemon Solid.ttf": "/PROJECT-MEMORY-CARD/static/media/Pokemon Solid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/PROJECT-MEMORY-CARD/index.html",
-    "main.d8709705.css.map": "/PROJECT-MEMORY-CARD/static/css/main.d8709705.css.map",
-    "main.812c836b.js.map": "/PROJECT-MEMORY-CARD/static/js/main.812c836b.js.map"
+    "main.7f79ccd8.css.map": "/PROJECT-MEMORY-CARD/static/css/main.7f79ccd8.css.map",
+    "main.b7760829.js.map": "/PROJECT-MEMORY-CARD/static/js/main.b7760829.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8709705.css",
-    "static/js/main.812c836b.js"
+    "static/css/main.7f79ccd8.css",
+    "static/js/main.b7760829.js"
   ]
 }
