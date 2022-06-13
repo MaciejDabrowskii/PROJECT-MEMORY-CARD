@@ -9,7 +9,8 @@
   </h1>
 
   <img alt="App preview" src="https://raw.githubusercontent.com/MaciejDabrowskii/PROJECT-MEMORY-CARD/main/src/assets/preview/preview.jpg">
-
+<p></p>
+  
 🔗 <b>[Live preview](https://maciejdabrowskii.github.io/PROJECT-MEMORY-CARD/)</b>
 
 </div>
@@ -18,7 +19,7 @@
 
 Memory Card Game project, created with [React](https://reactjs.org/) library. The project is from [The Odin Project](hhttps://www.theodinproject.com/lessons/node-path-javascript-memory-card) curriculum.
 
-Goal is to practice hooks in functional components using React
+The goal is to practice hooks in functional components using React
 
 ### Technologies
 
@@ -37,9 +38,18 @@ Goal is to practice hooks in functional components using React
 ### Libraries
 
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-- [React Select](https://react-select.com/home)
 - [Font Awesome](https://fontawesome.com/)
+
+### Assets
+
+- [Images](https://www.pokemon.com/us/pokedex/)
+- [Font](https://www.dafont.com/pokemon.font)
 
 ## Author
 
 [Maciej Dąbrowski](https://github.com/MaciejDabrowskii)
+
+## Disclaimer
+
+I don't own rights to the Pokemon trademark or any used images.<br>
+Images were used only for learning purposes and the application will not be used in any commercial use.
