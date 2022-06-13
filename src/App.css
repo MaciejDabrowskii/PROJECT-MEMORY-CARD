@@ -13,9 +13,6 @@
     --main-pink: rgb(250, 208, 213);
     --background-blue: rgb(158, 222, 249)
 }
-#root{
-    
-}
 
 body{
     display: block;
@@ -27,6 +24,7 @@ body{
 .App{
     display:flex; 
     flex-direction:column; 
+    width: 100%;
     height:100vh;
 }
 
@@ -35,11 +33,11 @@ body{
     letter-spacing: .5rem;
     text-align: center;
     padding: 2rem 0 2rem 0;
-    font-size: 2rem;
+    font-size: min(2rem,  3vw);
     background-color: var(--main-blue);
     color: var(--main-yellow);
-    /* margin-bottom: 2rem; */
 }
+
 .scoreboard-container {
     display: flex;
     align-items: center;
@@ -48,7 +46,7 @@ body{
     color: var(--main-blue);
     padding: 1rem;
     gap: 1rem;
-    font-size: 2rem;
+    font-size: min(2rem,  3vw);
     font-weight: bold;
     margin-bottom: 2rem;
 }
@@ -64,23 +62,24 @@ body{
 }
 
 .cards-container{
-    display: flex;
-    gap: .3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-rows: repeat( 1fr);
+    gap: .5rem;
     align-items: center;
     justify-content: center;
+    padding: 0 .4rem 0 .4rem;
+    margin-bottom: min(5%);
 }
 .card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    width: 25rem;
-    height: 28rem;
     border: .5rem solid var(--main-blue);
     border-radius: 2rem;
     background-color: var(--background-blue);
-    font-size: 1rem;
-    font-size: 2rem;
+    font-size: min(2rem,  5rem);
     font-weight: bold;
     cursor: pointer;
     overflow: hidden;
@@ -179,7 +178,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-bottom:  1rem;
     background-color: var(--main-blue);
     padding: .5rem;
 }
