@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/PROJECT-MEMORY-CARD/static/css/main.d8709705.css",
+    "main.js": "/PROJECT-MEMORY-CARD/static/js/main.812c836b.js",
+    "static/media/bulbasaur.png": "/PROJECT-MEMORY-CARD/static/media/bulbasaur.961a737abc93a29558b0.png",
+    "static/media/omanyte.png": "/PROJECT-MEMORY-CARD/static/media/omanyte.7a081c60b4eb8d1f2761.png",
+    "static/media/articuno.png": "/PROJECT-MEMORY-CARD/static/media/articuno.297a4df9128748b5c0f0.png",
+    "static/media/staryu.png": "/PROJECT-MEMORY-CARD/static/media/staryu.077ecd2c6646e3d39fbf.png",
+    "static/media/squirtle.png": "/PROJECT-MEMORY-CARD/static/media/squirtle.5406ef593ec743416dcc.png",
+    "static/media/porygon.png": "/PROJECT-MEMORY-CARD/static/media/porygon.57e52c5c6706cfa9f5f4.png",
+    "static/media/koffing.png": "/PROJECT-MEMORY-CARD/static/media/koffing.245221e327eff9239403.png",
+    "static/media/charmander.png": "/PROJECT-MEMORY-CARD/static/media/charmander.4fd5701aa09647505bc4.png",
+    "static/media/mewtwo.png": "/PROJECT-MEMORY-CARD/static/media/mewtwo.072f8c2f41d480c7a819.png",
+    "static/media/weepinbell.png": "/PROJECT-MEMORY-CARD/static/media/weepinbell.b7591bfe3473106cdaf4.png",
+    "static/media/pikachu.png": "/PROJECT-MEMORY-CARD/static/media/pikachu.d20bdd5d52ce4df7f2b0.png",
+    "static/media/psyduck.png": "/PROJECT-MEMORY-CARD/static/media/psyduck.482f932413777c94f332.png",
+    "static/media/zapdos.png": "/PROJECT-MEMORY-CARD/static/media/zapdos.cdab951d8198234a1f61.png",
+    "static/media/magnemite.png": "/PROJECT-MEMORY-CARD/static/media/magnemite.2d0e214c6543d1482a12.png",
+    "static/media/moltres.png": "/PROJECT-MEMORY-CARD/static/media/moltres.5efe99b7631ec8f48f57.png",
+    "static/media/geodude.png": "/PROJECT-MEMORY-CARD/static/media/geodude.374f30131a78b3d6399d.png",
+    "index.html": "/PROJECT-MEMORY-CARD/index.html",
+    "main.d8709705.css.map": "/PROJECT-MEMORY-CARD/static/css/main.d8709705.css.map",
+    "main.812c836b.js.map": "/PROJECT-MEMORY-CARD/static/js/main.812c836b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8709705.css",
+    "static/js/main.812c836b.js"
+  ]
+}
