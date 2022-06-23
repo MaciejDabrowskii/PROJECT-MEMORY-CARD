@@ -1,198 +1,201 @@
 @font-face {
-    font-family: "PokemonSolid";
-    src: local("PokemonSolid"),
-     url("./assets/fonts/Pokemon Solid.ttf") format("truetype");
-    }
+  font-family: "PokemonSolid";
+  src: local("PokemonSolid"),
+    url("./assets/fonts/Pokemon Solid.ttf") format("truetype");
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --main-blue: rgb(60, 143, 253);
-    --main-red: rgb(255, 0, 0);
-    --main-yellow: rgb(255, 222, 0);
-    --main-green: rgb(16, 185, 129);
-    --main-pink: rgb(250, 208, 213);
-    --background-blue: rgb(158, 222, 249)
+:root {
+  --main-blue: rgb(60, 143, 253);
+  --main-red: rgb(255, 0, 0);
+  --main-yellow: rgb(255, 222, 0);
+  --main-green: rgb(16, 185, 129);
+  --main-pink: rgb(250, 208, 213);
+  --background-blue: rgb(158, 222, 249);
 }
 
-body{
-    display: block;
-    margin: 0;
-    padding: 0;
-    background-color: var(--main-pink);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-pink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.App{
-    display:flex; 
-    flex-direction:column; 
-    width: 100%;
-    height:100vh;
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 
 .header {
-    font-family: 'PokemonSolid', sans-serif;
-    letter-spacing: .5rem;
-    text-align: center;
-    padding: 2rem 0 2rem 0;
-    font-size: min(2rem,  3vw);
-    background-color: var(--main-blue);
-    color: var(--main-yellow);
+  font-family: "PokemonSolid", sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  font-size: min(2rem, 3vw);
+  background-color: var(--main-blue);
+  color: var(--main-yellow);
 }
 
 .scoreboard-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-yellow);
-    color: var(--main-blue);
-    padding: 1rem;
-    gap: 1rem;
-    font-size: min(2rem,  3vw);
-    font-weight: bold;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-yellow);
+  color: var(--main-blue);
+  padding: 1rem;
+  gap: 1rem;
+  font-size: min(2rem, 3vw);
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 .scoreboard-bestScore {
-    display: flex;
-    gap: 1rem;
-    padding: 0 1rem 0 1rem;
-    border-left: .4rem solid var(--main-green);
-    border-right: .4rem solid var(--main-green);
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+  border-left: 0.4rem solid var(--main-green);
+  border-right: 0.4rem solid var(--main-green);
 }
-.scoreboard-bestScore-value{
-    color: var(--main-red);
-}
-
-.cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    grid-template-rows: repeat( 1fr);
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0 .4rem 0 .4rem;
-    margin-bottom: min(5%);
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    border: .5rem solid var(--main-blue);
-    border-radius: 2rem;
-    background-color: var(--background-blue);
-    font-size: min(2rem,  5rem);
-    font-weight: bold;
-    cursor: pointer;
-    overflow: hidden;
+.scoreboard-bestScore-value {
+  color: var(--main-red);
 }
 
-.card-img{
-    padding: 1rem;
-    width: 100%;
-    height: auto;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-rows: repeat(1fr);
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem 0 0.4rem;
+  margin-bottom: min(5%);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: 0.5rem solid var(--main-blue);
+  border-radius: 2rem;
+  background-color: var(--background-blue);
+  font-size: min(2rem, 5rem);
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
 
+.card-img {
+  padding: 1rem;
+  width: 100%;
+  height: auto;
 }
 .card img {
-    transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
-.card:hover img{
-    transform: scale(1.1);
-}
-
-.card-title{
-    padding: .3rem;
-    background-color: var(--main-yellow);
-    color: var(--main-blue);
+.card:hover img {
+  transform: scale(1.1);
 }
 
-.card-title, .card-img {
-    pointer-events: none
+.card-title {
+  padding: 0.3rem;
+  background-color: var(--main-yellow);
+  color: var(--main-blue);
+}
+
+.card-title,
+.card-img {
+  pointer-events: none;
 }
 
 /* modal */
 .modal-background {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(200, 200, 200, 0.521);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.521);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
-.modal-container{
-    background-color: rgb(255, 255, 255);
-    width: 35rem;
-    height: 20rem;
-    border: .6rem solid var(--main-blue);
-    background-color: var(--background-blue);
-    border-radius: 2rem;
-    color: var(--main-blue);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.modal-container {
+  background-color: rgb(255, 255, 255);
+  width: 35rem;
+  height: 20rem;
+  border: 0.6rem solid var(--main-blue);
+  background-color: var(--background-blue);
+  border-radius: 2rem;
+  color: var(--main-blue);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 .modal-close-btn {
-    right: 1.5rem;
-    top: 1rem;
-    position: absolute;
-    border: none;
-    color: var(--main-blue);
-    background-color: inherit;
-    font-size: 1.5rem;
-    cursor: pointer;
+  right: 1.5rem;
+  top: 1rem;
+  position: absolute;
+  border: none;
+  color: var(--main-blue);
+  background-color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 .modal-close-btn:hover {
-    color: var(--main-red)
+  color: var(--main-red);
 }
 .modal-title {
-    font-size: 3rem;
-    font-weight: bolder;
-    align-self: center;
-    text-align: center;
-    width: 70%;
-    border-bottom: .3rem solid var(--main-red);
+  font-size: 3rem;
+  font-weight: bolder;
+  align-self: center;
+  text-align: center;
+  width: 70%;
+  border-bottom: 0.3rem solid var(--main-red);
 }
-.modal-body{
-    font-size: 1.5rem;
+.modal-body {
+  font-size: 1.5rem;
 }
-.modal-restartGame-btn{
-    padding: .7rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: .2rem solid var(--main-red);
-    border-radius: 1rem;
-    color: var(--main-blue);
-    background-color: inherit;
-    cursor: pointer;
+.modal-restartGame-btn {
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0.2rem solid var(--main-red);
+  border-radius: 1rem;
+  color: var(--main-blue);
+  background-color: inherit;
+  cursor: pointer;
 }
-.modal-restartGame-btn:hover{
-    background-color: var(--main-yellow);
-    /* color: white; */
+.modal-restartGame-btn:hover {
+  background-color: var(--main-yellow);
+  /* color: white; */
 }
-.footer-container{
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--main-blue);
-    padding: .5rem;
+.footer-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--main-blue);
+  padding: 0.5rem;
 }
-.git-icon{
-    box-sizing: border-box;
-    font-size: 1.5rem;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
+.git-icon {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 }
 .git-icon:hover {
-    transform: rotate(360deg) scale(1.2);
-    color: var(--main-yellow);
+  transform: rotate(360deg) scale(1.2);
+  color: var(--main-yellow);
 }

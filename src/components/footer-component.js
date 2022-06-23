@@ -12,14 +12,8 @@ function FooterComponent()
   };
 
   return (
-    <div
-      className="footer-container"
-    >
-      <h3
-        className="footer-text"
-      >
-        Created by Maciej Dąbrowski
-      </h3>
+    <div className="footer-container">
+      <h3 className="footer-text">Created by Maciej Dąbrowski</h3>
       <FontAwesomeIcon
         icon={faGithub}
         className="fa-solid git-icon"

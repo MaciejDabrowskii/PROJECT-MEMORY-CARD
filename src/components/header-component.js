@@ -4,9 +4,7 @@ function HeaderComponent()
 {
   return (
     <div className="header">
-      <h1 className="header-title">
-        Pokemon Memory Game
-      </h1>
+      <h1 className="header-title">Pokemon Memory Game</h1>
     </div>
   );
 }

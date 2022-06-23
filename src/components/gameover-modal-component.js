@@ -15,9 +15,7 @@ function GameOverModalComponent(props)
         >
           ✖
         </button>
-        <div className="modal-title">
-          Game Over
-        </div>
+        <div className="modal-title">Game Over</div>
         <div className="modal-body">
           Your final score is
           {" "}

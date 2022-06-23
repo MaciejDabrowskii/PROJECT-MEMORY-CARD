@@ -10,29 +10,18 @@ function CardsComponent(props)
 {
   return (
     <div className="cards-container">
-      {
-       props.cards
-         .map((card) => (
-           <div
-             className="card"
-             key={card.id}
-             data-key={card.id}
-             onClick={props.onClick}
-             data-clicked={card.clicked}
-           >
-             <img
-               alt={card.title}
-               src={card.imgUrl}
-               className="card-img"
-             />
-             <p
-               className="card-title"
-             >
-               {card.name}
-             </p>
-           </div>
-         ))
-        }
+      {props.cards.map((card) => (
+        <div
+          className="card"
+          key={card.id}
+          data-key={card.id}
+          onClick={props.onClick}
+          data-clicked={card.clicked}
+        >
+          <img alt={card.title} src={card.imgUrl} className="card-img" />
+          <p className="card-title">{card.name}</p>
+        </div>
+      ))}
     </div>
   );
 }

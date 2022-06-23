@@ -6,31 +6,17 @@ import React from "react";
 function ScoreboardComponent(props)
 {
   return (
-    <div
-      className="scoreboard-container"
-    >
-      <div
-        className="scoreboard-score"
-      >
+    <div className="scoreboard-container">
+      <div className="scoreboard-score">
         Score:
         {" "}
         {props.score}
       </div>
-      <div
-        className="scoreboard-bestScore"
-      >
+      <div className="scoreboard-bestScore">
         <p>Best Score:</p>
-        <p
-          className="scoreboard-bestScore-value"
-        >
-          {props.bestScore}
-
-        </p>
-
+        <p className="scoreboard-bestScore-value">{props.bestScore}</p>
       </div>
-      <div
-        className="scoreboard-level"
-      >
+      <div className="scoreboard-level">
         Level:
         {" "}
         {props.level}

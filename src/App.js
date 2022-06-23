@@ -30,7 +30,9 @@ function App()
 
   const cards = Cards();
 
-  const [cardsArray, setCardsArray] = useState([...cards].slice(0, level[currentLevel]));
+  const [cardsArray, setCardsArray] = useState(
+    [...cards].slice(0, level[currentLevel]),
+  );
 
   const incrementScore = () =>
   {
@@ -130,13 +132,12 @@ function App()
 
   return (
     <div className="App">
-      {displayModal
-      && (
-      <GameOverModalComponent
-        score={currentScore}
-        restartGame={restartGame}
-        closeModal={restartGame}
-      />
+      {displayModal && (
+        <GameOverModalComponent
+          score={currentScore}
+          restartGame={restartGame}
+          closeModal={restartGame}
+        />
       )}
       <HeaderComponent />
       <ScoreboardComponent
