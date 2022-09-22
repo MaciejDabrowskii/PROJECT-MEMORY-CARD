@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PROJECT-MEMORY-CARD/static/css/main.7f79ccd8.css",
-    "main.js": "/PROJECT-MEMORY-CARD/static/js/main.b7760829.js",
+    "main.js": "/PROJECT-MEMORY-CARD/static/js/main.9115698c.js",
     "static/media/bulbasaur.png": "/PROJECT-MEMORY-CARD/static/media/bulbasaur.961a737abc93a29558b0.png",
     "static/media/omanyte.png": "/PROJECT-MEMORY-CARD/static/media/omanyte.7a081c60b4eb8d1f2761.png",
     "static/media/articuno.png": "/PROJECT-MEMORY-CARD/static/media/articuno.297a4df9128748b5c0f0.png",
@@ -21,10 +21,10 @@
     "static/media/Pokemon Solid.ttf": "/PROJECT-MEMORY-CARD/static/media/Pokemon Solid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/PROJECT-MEMORY-CARD/index.html",
     "main.7f79ccd8.css.map": "/PROJECT-MEMORY-CARD/static/css/main.7f79ccd8.css.map",
-    "main.b7760829.js.map": "/PROJECT-MEMORY-CARD/static/js/main.b7760829.js.map"
+    "main.9115698c.js.map": "/PROJECT-MEMORY-CARD/static/js/main.9115698c.js.map"
   },
   "entrypoints": [
     "static/css/main.7f79ccd8.css",
-    "static/js/main.b7760829.js"
+    "static/js/main.9115698c.js"
   ]
 }
