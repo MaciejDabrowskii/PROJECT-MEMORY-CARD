@@ -36,8 +36,8 @@ function App()
 
   const incrementScore = () =>
   {
-    setScore(score + 1);
-    setCurrentScore(currentScore + 1);
+    setScore((prevState) => (prevState + 1));
+    setCurrentScore((prevState) => (prevState + 1));
   };
 
   const updateBestScore = () =>
@@ -134,7 +134,7 @@ function App()
     <div className="App">
       {displayModal && (
         <GameOverModalComponent
-          score={currentScore}
+          score={score}
           restartGame={restartGame}
           closeModal={restartGame}
         />
